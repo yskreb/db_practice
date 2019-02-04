@@ -1,0 +1,15 @@
+3.1 SELECT Name FROM Purchasing.Vendor;
+3.2 SELECT Name, CreditRating FROM Purchasing.Vendor WHERE CreditRating < 5;
+3.3 SELECT * FROM Purchasing.Vendor WHERE PurchasingWebServiceURL IS NOT NULL;
+3.4 SELECT DISTINCT FirstName FROM Person.Contact WHERE Title in ('Ms.', 'Sra.');
+3.5 SELECT EmailAddress FROM Person.Contact WHERE EmailPromotion = 1;
+3.6 SELECT Title, FirstName, MiddleName, LastName, Phone FROM Person.Contact WHERE Phone LIKE '%016%';
+3.7 SELECT DISTINCT Title FROM HumanResources.Employee;
+3.8 SELECT DISTINCT Title FROM HumanResources.Employee WHERE Gender = 'M';
+3.9 SELECT DISTINCT Title FROM HumanResources.Employee WHERE (day(HireDate) = 4) AND (month(HireDate) = 1) AND (year(HireDate) = 2000);
+3.10 SELECT DISTINCT Title FROM HumanResources.Employee WHERE (month(HireDate) >= 3 AND YEAR(HireDate) = 1999) OR (month(HireDate) = 1 AND year(HireDate) = 2000);
+3.11 SELECT EmployeeID FROM HumanResources.Employee WHERE VacationHours + SickLeaveHours > 100;
+3.12 SELECT Name FROM Production.Product WHERE Size = '40';
+3.13 SELECT Name FROM Production.Product WHERE ProductLine <> 'T';
+3.14 SELECT Name FROM Production.Product WHERE DaysToManufacture > 3;
+3.15 SELECT DISTINCT OnOrderQty FROM Purchasing.ProductVendor WHERE OnOrderQty IS NOT NULL;
