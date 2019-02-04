@@ -10,4 +10,9 @@
 3.10 SELECT COUNT(MaritalStatus) FROM HumanResources.Employee WHERE MaritalStatus='M' AND Gender = 'F';
 3.11 SELECT Gender, SUM(SickLeaveHours) FROM HumanResources.Employee GROUP BY Gender;
 3.12 SELECT Title, COUNT(Title) AS Result FROM Person.Contact WHERE Title IS NOT NULL GROUP BY Title ORDER BY Result;
-3.13 
+3.13 SELECT MakeFlag, AVG(SafetyStockLevel) FROM Production.Product GROUP BY MakeFlag;
+3.14 SELECT * FROM Production.Product ORDER BY DaysToManufacture;
+3.15 SELECT Style, AVG(ListPrice) FROM Production.Product WHERE Style IN ('M', 'W') GROUP BY Style;
+3.16???? SELECT COUNT(Name) AS Active FROM Purchasing.Vendor GROUP BY CreditRating;
+3.17 -
+3.18 -
