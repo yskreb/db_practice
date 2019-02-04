@@ -1,0 +1,13 @@
+3.1 SELECT Name, StandardCost FROM Production.Product WHERE Style = 'W' ORDER BY StandardCost;
+3.2 SELECT Name FROM Production.Product WHERE MakeFlag = 0 ORDER BY Name;
+3.3 SELECT FirstName, MiddleName, LastName FROM Person.Contact WHERE EmailPromotion = 1 ORDER BY FirstName, MiddleName, LastName;
+3.4 SELECT * FROM Purchasing.Vendor WHERE CreditRating = 1 ORDER BY Name DESC;
+3.5 SELECT Name, Color FROM Production.Product WHERE Color IS NOT NULL ORDER BY Color;
+3.6 SELECT ProductLine, AVG(DaysToManufacture) AS 'AVG' FROM Production.Product WHERE ProductLine IS NOT NULL GROUP BY ProductLine;
+3.7 SELECT AVG(StandardCost) FROM Production.Product WHERE MakeFlag = 0;
+3.8 SELECT COUNT(CreditRating) FROM Purchasing.Vendor WHERE ActiveFlag = 1 GROUP BY CreditRating;
+3.9 ---
+3.10 SELECT COUNT(MaritalStatus) FROM HumanResources.Employee WHERE MaritalStatus='M' AND Gender = 'F';
+3.11 SELECT Gender, SUM(SickLeaveHours) FROM HumanResources.Employee GROUP BY Gender;
+3.12 SELECT Title, COUNT(Title) AS Result FROM Person.Contact WHERE Title IS NOT NULL GROUP BY Title ORDER BY Result;
+3.13 
